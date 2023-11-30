@@ -1,0 +1,79 @@
+#pragma once
+
+
+
+
+namespace SDK
+{
+//---------------------------------------------------------------------------------------------------------------------
+// ENUMS
+//---------------------------------------------------------------------------------------------------------------------
+
+enum class ETwoPlayerSplitScreenType : uint8
+{
+	Horizontal                     = 0,
+	Vertical                       = 1,
+	ETwoPlayerSplitScreenType_MAX  = 2,
+};
+
+enum class EThreePlayerSplitScreenType : uint8
+{
+	FavorTop                       = 0,
+	FavorBottom                    = 1,
+	Vertical                       = 2,
+	Horizontal                     = 3,
+	EThreePlayerSplitScreenType_MAX = 4,
+};
+
+enum class EFourPlayerSplitScreenType : uint8
+{
+	Grid                           = 0,
+	Vertical                       = 1,
+	Horizontal                     = 2,
+	EFourPlayerSplitScreenType_MAX = 3,
+};
+
+enum class ESubLevelStripMode : uint8
+{
+	ExactClass                     = 0,
+	IsChildOf                      = 1,
+	ESubLevelStripMode_MAX         = 2,
+};
+
+
+//---------------------------------------------------------------------------------------------------------------------
+// STRUCTS
+//---------------------------------------------------------------------------------------------------------------------
+
+// 0x28 (0x28 - 0x0)
+// ScriptStruct EngineSettings.AutoCompleteCommand
+struct EngineSettings_AutoCompleteCommand
+{
+public:
+	class FString                                Command;                                           // 0x0(0x10)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                Desc;                                              // 0x10(0x10)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                        Pad_2E4[0x8];                                      // Fixing Size Of Struct 
+};
+
+// 0x30 (0x30 - 0x0)
+// ScriptStruct EngineSettings.GameModeName
+struct EngineSettings_GameModeName
+{
+public:
+	class FString                                Name;                                              // 0x0(0x10)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct CoreUObject_SoftClassPath             GameMode;                                          // 0x10(0x20)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+
+// 0x58 (0x58 - 0x0)
+// ScriptStruct EngineSettings.TemplateMapInfoOverride
+struct EngineSettings_TemplateMapInfoOverride
+{
+public:
+	struct CoreUObject_SoftObjectPath            Thumbnail;                                         // 0x0(0x20)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct CoreUObject_SoftObjectPath            Map;                                               // 0x20(0x20)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                  DisplayName;                                       // 0x40(0x18)(Edit, Config, NativeAccessSpecifierPublic)
+};
+
+}
+
+

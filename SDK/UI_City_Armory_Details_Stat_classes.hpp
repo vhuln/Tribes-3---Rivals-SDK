@@ -1,0 +1,52 @@
+#pragma once
+
+
+
+
+namespace SDK
+{
+//---------------------------------------------------------------------------------------------------------------------
+// CLASSES
+//---------------------------------------------------------------------------------------------------------------------
+
+// 0x131 (0x3F1 - 0x2C0)
+// WidgetBlueprintGeneratedClass UI_City_Armory_Details_Stat.UI_City_Armory_Details_Stat_C
+class UUI_City_Armory_Details_Stat_C : public UUserWidget
+{
+public:
+	class UTextBlock*                            ModifierIndicator;                                 // 0x2C0(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                            NameText;                                          // 0x2C8(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UTextBlock*                            ValueText;                                         // 0x2D0(0x8)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                  DefaultName;                                       // 0x2D8(0x18)(Edit, BlueprintVisible, BlueprintReadOnly)
+	bool                                         DefaultInteger;                                    // 0x2F0(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                         DefaultInverted;                                   // 0x2F1(0x1)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                        Pad_1F63[0x6];                                     // Fixing Size After Last Property  
+	TArray<class FString>                        DefaultAttributes;                                 // 0x2F8(0x10)(Edit, BlueprintVisible, BlueprintReadOnly)
+	double                                       CachedValue;                                       // 0x308(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct GameplayAbilities_GameplayModifierInfo> CachedModifiers;                                   // 0x310(0x10)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TArray<double>                               DefaultBaseValues;                                 // 0x320(0x10)(Edit, BlueprintVisible, ExposeOnSpawn)
+	bool                                         DefaultHideIfMelee;                                // 0x330(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                        Pad_1F6F[0x7];                                     // Fixing Size After Last Property  
+	TArray<int32>                                DefaultMultiplicativelyDisplayedIndices;           // 0x338(0x10)(Edit, BlueprintVisible)
+	TSet<class FString>                          DefaultOffensiveStats;                             // 0x348(0x50)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TSet<class FString>                          DefaultDefensiveStats;                             // 0x398(0x50)(Edit, BlueprintVisible, DisableEditOnInstance)
+	class UValStatModMap*                        DefaultStatModMap;                                 // 0x3E8(0x8)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	enum class ERoundingBehavior                 DefaultRoundingBehavior;                           // 0x3F0(0x1)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+	static class UClass* StaticClass();
+	static class UUI_City_Armory_Details_Stat_C* GetDefaultObj();
+
+	void UpdateHasModApplied(bool ModWasApplied);
+	void GetModValue(const struct Valhalla_InventoryItem& Item, double* ModValue, float LocalModValue, double LocalReturnMod, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, int32 CallFunc_Array_Length_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue, int32 Temp_int_Array_Index_Variable, const struct Valhalla_InventoryMod& CallFunc_Array_Get_Item, int32 Temp_int_Array_Index_Variable_1, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue, double CallFunc_Add_DoubleDouble_ReturnValue, bool CallFunc_NotEqual_DoubleDouble_ReturnValue, int32 Temp_int_Loop_Counter_Variable_1, double CallFunc_Multiply_DoubleDouble_ReturnValue, int32 CallFunc_Add_IntInt_ReturnValue_1, const class FString& CallFunc_Array_Get_Item_1, enum class EGameplayModOp CallFunc_GetModifierOperation_Modifier_Op, const class FString& CallFunc_Map_Find_Value, bool CallFunc_Map_Find_ReturnValue, bool K2Node_SwitchEnum_CmpSuccess, bool CallFunc_EqualEqual_StrStr_ReturnValue, int32 CallFunc_Array_Length_ReturnValue_1, bool CallFunc_Less_IntInt_ReturnValue_1, double K2Node_VariableSet_LocalReturnMod_ImplicitCast, double CallFunc_Divide_DoubleDouble_B_ImplicitCast, double CallFunc_Subtract_DoubleDouble_A_ImplicitCast, double CallFunc_Multiply_DoubleDouble_A_ImplicitCast);
+	void GetModifierOperation(const class FString& ModifierId, enum class EGameplayModOp* Modifier_Op, int32 Temp_int_Array_Index_Variable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, const struct GameplayAbilities_GameplayModifierInfo& CallFunc_Array_Get_Item, int32 CallFunc_Array_Length_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue, bool CallFunc_EqualEqual_StrStr_ReturnValue);
+	void UpdateValueDisplayMultiplicatively(TArray<double>& Values, const class FString& LocalOutputString, int32 CallFunc_Array_Length_ReturnValue, int32 Temp_int_Array_Index_Variable, int32 Temp_int_Loop_Counter_Variable, double CallFunc_Array_Get_Item, const class FString& CallFunc_Conv_DoubleToString_ReturnValue, int32 CallFunc_Round_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue, const class FString& CallFunc_Conv_IntToString_ReturnValue, int32 CallFunc_Add_IntInt_ReturnValue, bool CallFunc_EqualEqual_IntInt_ReturnValue, const class FString& CallFunc_SelectString_ReturnValue, const class FString& CallFunc_Concat_StrStr_ReturnValue, class FText CallFunc_Conv_StringToText_ReturnValue, const class FString& CallFunc_SelectString_ReturnValue_1, const class FString& CallFunc_Concat_StrStr_ReturnValue_1);
+	void HideValue();
+	void GetModifierValue(const class FString& ModifierId, const struct Valhalla_InventoryItem& Item, double* Value, double LocalMod, float LocalReturnValue, int32 Temp_int_Array_Index_Variable, double CallFunc_Add_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue, double CallFunc_Array_Get_Item, bool CallFunc_Array_IsValidIndex_ReturnValue, bool CallFunc_EqualEqual_DoubleDouble_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue_1, double CallFunc_GetModValue_ModValue, double CallFunc_Multiply_DoubleDouble_ReturnValue, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, bool CallFunc_Set_Contains_ReturnValue, double CallFunc_SelectFloat_ReturnValue, double CallFunc_Add_DoubleDouble_ReturnValue_1, double CallFunc_Multiply_DoubleDouble_ReturnValue_1, bool CallFunc_Set_Contains_ReturnValue_1, double CallFunc_SelectFloat_ReturnValue_1, const struct GameplayAbilities_GameplayModifierInfo& CallFunc_Array_Get_Item_1, double CallFunc_Add_DoubleDouble_ReturnValue_2, double CallFunc_Multiply_DoubleDouble_ReturnValue_2, bool CallFunc_EqualEqual_StrStr_ReturnValue, int32 CallFunc_Array_Length_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue, double K2Node_FunctionResult_Value_ImplicitCast, double K2Node_FunctionResult_Value_ImplicitCast_1, double CallFunc_Add_DoubleDouble_B_ImplicitCast, float K2Node_VariableSet_LocalReturnValue_ImplicitCast, double CallFunc_Divide_DoubleDouble_A_ImplicitCast, double CallFunc_Divide_DoubleDouble_A_ImplicitCast_1, double CallFunc_Multiply_DoubleDouble_A_ImplicitCast, float K2Node_VariableSet_LocalReturnValue_ImplicitCast_1, double CallFunc_Multiply_DoubleDouble_A_ImplicitCast_1, float K2Node_VariableSet_LocalReturnValue_ImplicitCast_2, double CallFunc_Multiply_DoubleDouble_A_ImplicitCast_2, float K2Node_VariableSet_LocalReturnValue_ImplicitCast_3);
+	void UpdateModifiers(TArray<struct GameplayAbilities_GameplayModifierInfo>& Modifiers, const struct Valhalla_InventoryItem& Item, const class FString& TempModifierId, bool ShouldDisplayMultiplicatively, const TArray<double>& LocalModifierValues, double HEADSHOT_BASE_VALUE, double ModifierValue, double LocalValue, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, int32 Temp_int_Array_Index_Variable, double CallFunc_Array_Get_Item, double CallFunc_Array_Get_Item_1, double CallFunc_Array_Get_Item_2, double CallFunc_Array_Get_Item_3, bool CallFunc_Array_Contains_ReturnValue, double Temp_real_Variable, double CallFunc_GetModifierValue_Value, double CallFunc_Add_DoubleDouble_ReturnValue, bool CallFunc_NotEqual_DoubleDouble_ReturnValue, int32 CallFunc_Array_Add_ReturnValue, bool CallFunc_BooleanAND_ReturnValue, double CallFunc_Add_DoubleDouble_ReturnValue_1, enum class ERoundingBehavior Temp_byte_Variable, bool CallFunc_EqualEqual_DoubleDouble_ReturnValue, double CallFunc_Multiply_DoubleDouble_ReturnValue, int32 CallFunc_FFloor_ReturnValue, int32 CallFunc_FCeil_ReturnValue, double CallFunc_Conv_IntToDouble_ReturnValue, double CallFunc_Conv_IntToDouble_ReturnValue_1, int32 CallFunc_Round_ReturnValue, double CallFunc_Conv_IntToDouble_ReturnValue_2, const class FString& CallFunc_Array_Get_Item_4, double K2Node_Select_Default, int32 CallFunc_Array_Length_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue);
+	void UpdateValue(double Value, bool Temp_bool_Variable, double CallFunc_FMax_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_SelectFloat_ReturnValue, int32 CallFunc_Round_ReturnValue, class FText CallFunc_Conv_DoubleToText_ReturnValue, class FText CallFunc_Conv_IntToText_ReturnValue, class FText K2Node_Select_Default);
+	void PreConstruct(bool IsDesignTime);
+};
+
+}
+
+
